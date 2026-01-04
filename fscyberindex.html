@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CHARON_CYBER_13</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&display=swap');
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background: radial-gradient(circle at top, #0a0f2c 0%, #000 100%);
+      color: #00eaff;
+      min-height: 100vh;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px;
+      background: linear-gradient(135deg, #020b1f, #050a2e);
+      box-shadow: 0 0 20px rgba(0, 238, 255, 0.4);
+    }
+
+    header h1 {
+      font-size: 3em;
+      text-shadow:
+        0 0 5px rgba(0, 238, 255, 0.6),
+        0 0 10px rgba(0, 238, 255, 0.8),
+        0 0 20px rgba(0, 238, 255, 0.9);
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    nav button {
+      background: linear-gradient(145deg, #00eaff, #007bff);
+      border: none;
+      color: #000;
+      padding: 12px 20px;
+      border-radius: 30px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 0 15px rgba(0, 238, 255, 0.6);
+    }
+
+    nav button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 25px rgba(0, 238, 255, 0.9);
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .content-box {
+      display: none;
+      background: rgba(5, 10, 46, 0.8);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0, 238, 255, 0.3);
+      animation: fadeIn 0.5s ease;
+    }
+
+    .content-box h2 {
+      margin-bottom: 15px;
+      color: #00eaff;
+    }
+
+    .content-box p, .content-box ul {
+      line-height: 1.6;
+      color: #ccefff;
+    }
+
+    .content-box ul {
+      list-style: square;
+      margin-left: 20px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #88eaff;
+      font-size: 0.9em;
+    }
+
+    a {
+      color: #00eaff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>CHARON_CYBER_13</h1>
+  <p>Segurança • Tecnologia • Conhecimento</p>
+  <nav>
+    <button onclick="showContent('home')">Home</button>
+    <button onclick="showContent('security')">Segurança</button>
+    <button onclick="showContent('privacy')">Privacidade</button>
+    <button onclick="showContent('password')">Senhas</button>
+  </nav>
+</header>
+
+<div class="container">
+
+  <div id="home" class="content-box" style="display:block;">
+    <h2>Bem-vindo ao CHARON_CYBER_13</h2>
+    <p>Este site é dedicado a compartilhar informações sobre segurança digital, privacidade online e boas práticas na internet.</p>
+    <p>Conheça ferramentas que ajudam a proteger seus dados e sua identidade digital.</p>
+    <p>
+      Site oficial do Tor Browser:
+      <a href="https://www.torproject.org/" target="_blank">https://www.torproject.org/</a>
+    </p>
+  </div>
+
+  <div id="security" class="content-box">
+    <h2>Dicas de Segurança</h2>
+    <ul>
+      <li>Mantenha seu sistema sempre atualizado</li>
+      <li>Use antivírus confiável</li>
+      <li>Evite clicar em links suspeitos</li>
+      <li>Não baixe arquivos de fontes desconhecidas</li>
+    </ul>
+  </div>
+
+  <div id="privacy" class="content-box">
+    <h2>Privacidade Online</h2>
+    <p>Proteja sua privacidade usando navegadores focados em anonimato, VPNs confiáveis e evitando exposição excessiva de dados pessoais.</p>
+  </div>
+
+  <div id="password" class="content-box">
+    <h2>Troque suas Senhas</h2>
+    <p>Troque suas senhas regularmente, use combinações fortes e nunca compartilhe com ninguém.</p>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 • CHARON_CYBER_13 • Todos os direitos reservados
+</footer>
+
+<script>
+  function showContent(id){
+    document.querySelectorAll('.content-box').forEach(box => box.style.display = 'none');
+    document.getElementById(id).style.display = 'block';
+  }
+</script>
+
+</body>
+</html>
